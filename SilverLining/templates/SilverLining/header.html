@@ -1,0 +1,76 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+{% load staticfiles %}
+	<link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+        <link rel="stylesheet" href="{% static 'SilverLining/css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'SilverLining/css/main.css' %}">
+        <link rel="stylesheet" href="{% static 'SilverLining/css/font-awesome.min.css' %}">
+        <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
+		
+</head>
+
+<body id="page-top" class="index" style="background-color:#111111">
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        
+      </ol>
+
+<div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <img class="img-responsive" src="{% static 'SilverLining/img/sso.jpg' %}" alt="sso_image">
+          <div class="container">
+            <div class="carousel-caption">
+			<br><br><br>
+              <h1><color="black">Welcome to Silver Lining SSO</color></h1>
+            <br><br>
+              <p><a class="btn btn-lg btn-primary" href="{{ cas_url }}?service={{ openstack_url }}" } role="button">Login to OpenStack</a></p>
+			  
+            </div>
+			
+          </div>
+		  			
+
+        </div>
+
+	</div>	
+	</div>
+	<!--
+<nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header page-scroll">
+                    <a class="navbar-brand" href="#page-top">Silver Lining Web-Application</a>
+                </div>
+            </div>
+        </nav>
+<header>
+<div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+						<img  class="img-thumbnail" src="{% static 'SilverLining/img/design.png' %}" width="50%", height="auto" alt="">
+						<hr class="star-light">
+                            <span class="skills">Click on the button below to access the opestack application.</span>
+					</div>
+             <br/>
+		</div>
+    </div>
+</header>
+-->
+<div>
+	{% block content%}
+	{% endblock %}
+</div>
+
+
+
+</body>
+</html>
+
